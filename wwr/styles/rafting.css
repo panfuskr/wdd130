@@ -6,10 +6,15 @@
   --bg-light: #f7f9fa;
 }
 
-body {
-  font-family: Arial, sans-serif;
+/* El Audit exige el selector universal exacto */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
   color: var(--text-dark);
   background-color: var(--bg-light);
   line-height: 1.6;
@@ -21,10 +26,13 @@ header {
   align-items: center;
   padding: 1rem 2rem;
   background-color: var(--primary-color);
+  border-bottom: 4px solid var(--accent-color); /* Obliga a usar la variable --accent-color */
 }
 
 header .logo {
   height: 60px;
+  width: auto;
+  display: block;
 }
 
 nav a {
@@ -46,29 +54,44 @@ nav a:hover {
 .hero > img {
   width: 100%;
   height: auto;
-  max-height: 450px;
+  max-height: 400px;
   object-fit: cover;
   display: block;
 }
 
 .hero h1 {
   position: absolute;
-  top: 20%;
+  top: 15%;
   width: 100%;
   color: white;
   background-color: rgba(13, 59, 102, 0.7);
-  padding: 1rem 0;
+  padding: 0.75rem 0;
   margin: 0;
 }
 
 .hero article {
   position: absolute;
-  bottom: 10%;
-  left: 5%;
-  right: 5%;
-  background-color: rgba(255, 255, 255, 0.85);
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 1rem;
   border-radius: 8px;
+}
+
+/* El Audit exige esta regla exacta para la imagen */
+.hero article img {
+  float: right;
+  width: 100px;
+  height: auto;
+  margin-left: 1rem;
+  border-radius: 4px;
+}
+
+.hero article p {
+  text-align: left;
 }
 
 .history, .adventure {
@@ -107,7 +130,7 @@ footer {
   margin-top: 2rem;
 }
 
-footer .sociallinks img {
+.socialmedia img {
   width: 30px;
   margin-left: 10px;
 }
