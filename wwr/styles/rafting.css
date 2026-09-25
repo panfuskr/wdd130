@@ -6,7 +6,6 @@
   --bg-light: #f7f9fa;
 }
 
-/* El Audit exige el selector universal exacto */
 * {
   margin: 0;
   padding: 0;
@@ -26,7 +25,7 @@ header {
   align-items: center;
   padding: 1rem 2rem;
   background-color: var(--primary-color);
-  border-bottom: 4px solid var(--accent-color); /* Obliga a usar la variable --accent-color */
+  border-bottom: 4px solid var(--accent-color); 
 }
 
 header .logo {
@@ -81,7 +80,6 @@ nav a:hover {
   border-radius: 8px;
 }
 
-/* El Audit exige esta regla exacta para la imagen */
 .hero article img {
   float: right;
   width: 100px;
