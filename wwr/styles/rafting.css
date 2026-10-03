@@ -19,7 +19,6 @@ body {
   line-height: 1.6;
 }
 
-/* 2. Header: Cumple la rúbrica usando CSS Grid */
 header {
   display: grid;
   grid-template-columns: 150px 1fr;
@@ -35,7 +34,6 @@ header .logo {
   display: block;
 }
 
-/* 3. Nav: Cumple la rúbrica usando CSS Flex */
 header nav {
   display: flex;
   justify-content: flex-end;
@@ -54,13 +52,11 @@ header nav a:hover {
   color: var(--secondary-color);
 }
 
-/* Main */
 main {
   max-width: 1000px;
   margin: 0 auto;
 }
 
-/* Hero */
 .hero {
   position: relative;
   text-align: center;
@@ -109,7 +105,6 @@ main {
   text-align: left;
 }
 
-/* 4 & 6. History Section con distribución matching wireframe */
 .history {
   padding: 2.5rem 1rem;
 }
@@ -134,7 +129,6 @@ main {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* 4 & 6. Adventure Section: 5 imágenes uniformes */
 .adventure {
   padding: 1rem 1rem 3rem 1rem;
 }
@@ -176,7 +170,6 @@ main {
   color: var(--text-dark);
 }
 
-/* 5. Footer: Redes sociales horizontales a la derecha */
 footer {
   display: flex;
   justify-content: space-between;
