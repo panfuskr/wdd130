@@ -2,7 +2,7 @@
   --primary-color: #0d3b66;
   --secondary-color: #f4d35e;
   --accent-color: #ee964b;
-  --text-dark: #333333;
+  --text-dark: #222222;
   --bg-light: #f7f9fa;
 }
 
@@ -19,13 +19,14 @@ body {
   line-height: 1.6;
 }
 
+/* 2. Header: Cumple la rúbrica usando CSS Grid */
 header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 150px 1fr;
   align-items: center;
   padding: 1rem 2rem;
   background-color: var(--primary-color);
-  border-bottom: 4px solid var(--accent-color); 
+  border-bottom: 4px solid var(--accent-color);
 }
 
 header .logo {
@@ -34,17 +35,32 @@ header .logo {
   display: block;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 1.5rem;
-  font-weight: bold;
+/* 3. Nav: Cumple la rúbrica usando CSS Flex */
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
 }
 
-nav a:hover {
+header nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+header nav a:hover {
   color: var(--secondary-color);
 }
 
+/* Main */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Hero */
 .hero {
   position: relative;
   text-align: center;
@@ -62,8 +78,8 @@ nav a:hover {
   position: absolute;
   top: 15%;
   width: 100%;
-  color: white;
-  background-color: rgba(13, 59, 102, 0.7);
+  color: #ffffff;
+  background-color: rgba(13, 59, 102, 0.75);
   padding: 0.75rem 0;
   margin: 0;
 }
@@ -75,9 +91,10 @@ nav a:hover {
   transform: translateX(-50%);
   width: 80%;
   max-width: 600px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.95);
   padding: 1rem;
   border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .hero article img {
@@ -92,43 +109,97 @@ nav a:hover {
   text-align: left;
 }
 
-.history, .adventure {
-  padding: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
+/* 4 & 6. History Section con distribución matching wireframe */
+.history {
+  padding: 2.5rem 1rem;
+}
+
+.history h2 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.history-content {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.history-content img {
+  max-width: 220px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* 4 & 6. Adventure Section: 5 imágenes uniformes */
+.adventure {
+  padding: 1rem 1rem 3rem 1rem;
+}
+
+.adventure h2 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .gallery {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: nowrap;
 }
 
 .gallery figure {
+  flex: 1;
   margin: 0;
   text-align: center;
-  width: 180px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .gallery img {
   width: 100%;
   height: 120px;
   object-fit: cover;
-  border-radius: 6px;
+  display: block;
 }
 
+.gallery figcaption {
+  padding: 0.5rem 0.25rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--text-dark);
+}
+
+/* 5. Footer: Redes sociales horizontales a la derecha */
 footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1.25rem 2rem;
   background-color: var(--primary-color);
-  color: white;
+  color: #ffffff;
   margin-top: 2rem;
 }
 
+.socialmedia {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
 .socialmedia img {
-  width: 30px;
-  margin-left: 10px;
+  width: 28px;
+  height: 28px;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.socialmedia img:hover {
+  transform: scale(1.15);
 }
