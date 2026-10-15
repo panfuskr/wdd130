@@ -196,3 +196,160 @@ footer {
 .socialmedia img:hover {
   transform: scale(1.15);
 }
+
+/* ==========================================
+   CONTACT US PAGE STYLES (W05)
+   ========================================== */
+
+.page-title {
+  color: var(--primary-color);
+  text-align: center;
+  margin: 2rem 0 1rem 0;
+}
+
+.company-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 1.5rem 1rem;
+  align-items: center;
+}
+
+.contact-details h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.contact-details p {
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+}
+
+.map-container iframe {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.employees {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.employees h2 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.employee-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.employee-grid figure {
+  flex: 1;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.employee-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+.employee-grid figcaption {
+  margin-top: 0.75rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.employee-grid figcaption span {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: var(--text-dark);
+}
+
+.contact-form-section {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem 1rem 3rem 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-section h2 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-item label {
+  font-weight: bold;
+  color: var(--text-dark);
+}
+
+.form-item input,
+.form-item select,
+.form-item textarea {
+  padding: 0.65rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.form-item input:focus,
+.form-item select:focus,
+.form-item textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 4px rgba(238, 150, 75, 0.5);
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-checkbox label {
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.submit-btn {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0.85rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--accent-color);
+}
